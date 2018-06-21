@@ -293,7 +293,36 @@
 		</p>
 	</div>
 </body>
+<!-- 以下的程式碼是用來計算 <div id="area-*"> 是否出現在 viewport 裡，如果在 viewport 裡，則在會增加 to-animate 的 class 在 <div id="area-*"> 上 -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
+    crossorigin="anonymous"></script>
+<script>
+	$.fn.isInViewport = function() {
+		var elementTop = $(this)
+			.offset()
+			.top;
+		var elementBottom = elementTop + $(this)
+			.outerHeight();
 
+		var viewportTop = $(window)
+			.scrollTop();
+		var viewportBottom = $(window).scrollTop() + window.innerHeight/2;
+		return elementBottom > viewportTop && elementTop < viewportBottom;
+	};
+
+	$(window)
+		.on('resize scroll', function() {
+			$('.animation-block')
+				.each(function() {
+					var activeArea = $(this)
+						.attr('id');
+					if ($(this)
+						.isInViewport()) {
+						$('#' + activeArea)
+							.addClass('to-animate');
+					}
+				});
+		});
 
 </script>
 <!-- Hotjar Tracking Code for https://foreversuneasy.github.io/liver-burn/ -->
