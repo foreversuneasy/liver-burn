@@ -1,0 +1,452 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css" />
+    <style>
+        * {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Microsoft JhengHei", "Noto Sans TC", "PingFang TC", "Apple LiGothic Medium", Roboto, "Lucida Grande", "Lucida Sans Unicode", sans-serif;
+            background-color: #fff;
+        }
+
+        a {
+            color: #2d2d2d;
+            text-decoration: none;
+            border-bottom: 1px solid #c71b0a;
+        }
+
+        header,
+        article>header {
+            max-width: calc(270/320*100%);
+            margin: 0 auto;
+        }
+
+        @media screen and (min-width: 768px) and (max-width: 1023px) {
+            header {
+                width: 678px;
+            }
+
+            article,
+            article>header {
+                max-width: 678px;
+                margin: 0 auto;
+            }
+        }
+
+        @media screen and (min-width: 1024px) {
+            header {
+                width: 900px;
+            }
+
+            article,
+            article>header {
+                max-width: 900px;
+                margin: 0 auto;
+            }
+        }
+
+        header>table {
+            width: 100%;
+        }
+
+        article>header>span {
+            font-size: 16px;
+            font-weight: bold;
+            line-height: 2.25;
+        }
+
+        article>header>h1 {
+            margin-top: 11px;
+            font-size: 34px;
+            font-weight: bold;
+            line-height: 1.32;
+        }
+
+        article {
+            color: #2d2d2d;
+        }
+
+        article>figure {
+            margin: 40px 0 0 0;
+        }
+
+        @media screen and (min-width: 768px) and (max-width: 1023px) {
+            article>figure {
+                width: 678px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .float-right {
+                float: left;
+                width: 300px;
+                margin-top: 40px;
+                margin-right: 40px;
+                margin-bottom: 50px;
+            }
+        }
+
+        @media screen and (min-width: 1024px) {
+            article>figure {
+                width: 900px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .float-right {
+                float: right;
+                width: 360px;
+                margin-top: 40px;
+                margin-left: 40px;
+                margin-bottom: 50px;
+            }
+        }
+
+        article>p,
+        article>h2,
+        article>blockquote,
+        article>ul,
+        article figcaption,
+        article>div,
+        article>header {
+            max-width: calc(270/320*100%);
+            margin: 0 auto;
+        }
+
+        @media screen and (min-width: 768px) and (max-width: 1023px) {
+            article>p,
+            article>h2,
+            article>blockquote,
+            article>ul,
+            article figcaption,
+            article>div,
+            article>header,
+            article>ul {
+                width: 550px;
+            }
+        }
+
+        @media screen and (min-width: 1024px) {
+            article>p,
+            article>h2,
+            article>blockquote,
+            article>ul,
+            article figcaption,
+            article>div,
+            article>header {
+                max-width: 756px;
+            }
+            article>ul {
+                width: 700px;
+            }
+        }
+
+        article>ul {
+            width: 100%;
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        article>p,
+        article>blockquote {
+            font-size: 18px;
+            line-height: 2.0;
+            letter-spacing: 0.9px;
+            margin-top: 40px;
+        }
+
+        article>blockquote {
+            padding-left: 21px;
+            color: #6d6d6d;
+            border-left: 1px solid #6d6d6d;
+        }
+
+        article>h2 {
+            font-size: 22px;
+            font-weight: bold;
+            letter-spacing: 1.1px;
+            line-height: 1.64;
+            margin-top: 40px;
+        }
+
+        article figcaption {
+            font-size: 16px;
+            line-height: 1.5;
+            letter-spacing: 0.8px;
+            color: #6d6d6d;
+            margin-top: 15px;
+        }
+
+        .header {
+            margin-top: 17px;
+            margin-bottom: 17px;
+        }
+
+        .logo {
+            width: 100px;
+            height: 25px;
+            background-color: #e1e1e1;
+        }
+
+        .menu {
+            width: 22px;
+            height: 22px;
+            background-color: #e1e1e1;
+        }
+
+        .author {
+            margin-right: 30px;
+            font-size: 15px;
+            line-height: 2.25;
+        }
+
+        .introduction {
+            font-size: 20px;
+            line-height: 1.82;
+            letter-spacing: 1.6px;
+            text-align: justify;
+            margin-top: 30px;
+        }
+
+        .related-text {
+            font-size: 16px;
+            line-height: 2.25;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .related-items {
+            margin-bottom: 60px;
+        }
+
+        .related-item {
+            background-color: #e1e1e1;
+            margin-top: 20px;
+            padding: 20px;
+            cursor: pointer;
+        }
+
+        .related-item>img {
+            width: 20%;
+            vertical-align: middle;
+        }
+
+        .related-item>div {
+            display: inline-block;
+            width: 70%;
+            padding-left: 20px;
+            vertical-align: middle;
+            line-height: 1.5;
+        }
+
+        footer {
+            background-color: #bfbfbf;
+            min-height: 300px;
+        }
+
+        footer>table {
+            border-spacing: 45px;
+            width: 100%;
+        }
+
+        .footer-circle {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background-color: #777;
+            margin: 0 auto;
+        }
+
+        .footer-text {
+            margin-top: 15px;
+            font-size: 18px;
+            text-align: center;
+            color: #777;
+        }
+
+
+        @media screen and (max-width: 767px) {
+            table.hidden-on-mobile {
+                display: none;
+            }
+
+            table.shown-on-mobile {
+                display: table;
+            }
+        }
+
+        @media screen and (min-width: 768px) {
+            table.hidden-on-mobile {
+                display: table;
+                max-width: 770px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            table.shown-on-mobile {
+                display: none;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <header class="header">
+        <table>
+            <tbody>
+                <tr>
+                    <td>
+                        <div class="logo"></div>
+                    </td>
+                    <td style="width:22px;">
+                        <div class="menu"></div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </header>
+    <article>
+        <header>
+            <span>大學報專題</span>
+            <h1>在天空飛翔的鈔票　台灣賽鴿利益解密與合法化之路</h1>
+        </header>
+        <div style="margin-bottom:15px">
+            <span class="author">文
+                <b>
+                    <a href="https://www.facebook.com/profile.php?id=100000782258940" target="_blank">李昶毅</a>
+                </b>
+            </span>
+            <span class="author">攝影
+                <b>
+                    <a href="https://www.facebook.com/profile.php?id=100000782258940" target="_blank">李昶毅</a>
+                </b>
+            </span>
+        </div>
+        <figure>
+            <img src="gugu01.jpg" alt="leading image of this article" width="100%" />
+        </figure>
+        <p class="introduction">【專題記者陳棟、張玟榕、李昶毅、毛凱恩綜合報導】「只要讓我贏一次，人生全都不一樣了。」在台灣，一場賽鴿牽動上億元的金錢分配，檯面下賭金驚人，每隻鴿子都是就此翻身的希望。為確保賽事公平，台灣獨步發展海上放飛、鴿子一生只能比一次賽等在地文化。台灣擁有數十年賽鴿歷史，俱備國際級實力與消費力，卻是國際鴿聯中唯一非由政府管理的會員國。目前也面臨擄鴿勒贖、獎金該如何課稅等問題。
+        </p>
+        <h2>「賭」字成誘因 養鴿人投注心血
+        </h2>
+        <p>
+            賽鴿學問可粗略分為「種」、「養」、「訓」三類。「種」即育種，賽鴿的血統是鴿友判斷幼鴿能否脫穎而出的關鍵，因此許多鴿友會以高價標取名鴿育種。鴿友也會從羽毛、鴿眼、骨骼等特徵來判斷一隻鴿子的好壞。「養」同為一門學問，某北部資深鴿友L（化名）表示，除了掌握生理構造，也要研究鴿子的營養攝取、藥物使用。
+            訓練則是日後決勝負的關鍵。當幼鴿學會飛行後，養鴿人會逐步訓練賽鴿繞圈飛行，並引導賽鴿辨識方位，使其回到自己的鴿舍中。隨賽鴿年齡增長，養鴿人會帶賽鴿至外地放飛，逐漸拉長其飛行距離，以備日後比賽。
+        </p>
+        <P>
+            訓練則是日後決勝負的關鍵。當幼鴿學會飛行後，養鴿人會逐步訓練賽鴿繞圈飛行，並引導賽鴿辨識方位，使其回到自己的鴿舍中。隨賽鴿年齡增長，養鴿人會帶賽鴿至外地放飛，逐漸拉長其飛行距離，以備日後比賽。
+        </P>
+        <p>
+            人稱「財哥」的林木松擁有20多年賽鴿經驗，頭一回比賽就養出唯一歸返的鴿子，在當時為他賺進新台幣三百多萬元。後來他決定將錢全拿來投資鴿子，從此一頭栽進賽鴿的世界，「賽鴿迷人的地方就是『賭』，但最重要還是要對鴿子有興趣。」林木松因為賽鴿而有一片天，更在嘉義北港斥資500萬，打造120坪的鴿舍，相當於一個國際標準籃球場。
+        </p>
+        <P>
+            鴿友劉信雄認為，台灣賽鴿文化的最大特色就是賭金很高，加上賠率很難預料，過去曾有人賭幾十萬賺2000多萬，「大家都會覺得總有一天會輪到我，到時候什麼都有了。」不過他也強調，賽鴿跟六合彩等賭博不同，六合彩單純靠運氣，賽鴿還要看育種跟訓練技術等專業。
+        </P>
+        <P>
+            鴿友L說：「玩賽鴿的人百分之九十都輸錢，另外5%的人輸輸贏贏，最後5%投入比較多的資源，才有較高的獲勝機率。」他也分享高成本投入的案例，例如有獸醫也在飼養賽鴿，不但請專人管理，更會花錢採購較好品種。謝姓鴿友指出，現在許多鴿舍改以企業化經營，育種、訓練、醫療、會計都採專業分工，投入許多成本。
+        </P>
+        <figure>
+            <img src="gugu02.jpg" alt="一顆鳳梨直挺挺地豎立在海邊" width="100%" />
+            <figcaption>林木松飼養的種鴿數量眾多，每一隻皆身價不斐，有些甚至是林木松親自到歐洲挑選、購買。圖／張玟榕攝</figcaption>
+        </figure>
+        <h2>台灣賽制特殊　牽動龐大利益 </h2>
+        <p>
+            一般而言，鴿會每年會舉辦春、夏、冬共三季比賽，每季至少上萬隻鴿子參賽。若養鴿人有意參賽，需為每一隻參賽賽鴿購置內含辨識資訊的腳環。比賽由兩關資格賽加上五關正式比賽，構成五至六周的賽季。比賽的每一關會逐步拉長飛行距離，賽鴿要在時限內飛回鴿舍才得以晉級。到了最後第五關時，只會留下最優秀的賽鴿，挑戰長達三百至三百五十公里的歸巢之路，相當於台北至高雄單程距離。
+        </p>
+        <p style="margin-top:30px">
+            為避免陸地上A、B舍作弊方式（註），台灣所有鴿會都已採用「海翔制」，由各區數十個鴿會聯合雇用船隻出港統一放飛，賽鴿再各自飛回原鴿舍。除了晉級所要求的速度外，每一次比賽，賽鴿都須面臨季風、海象等挑戰，到了陸地上也有如電線、地形等阻礙，加上長距離的飛行，賽鴿「歸返率」會逐關降低。到了第五關，常剩不到百分之十的歸返率，代表許多賽鴿並未在規定時間內抵達家門，有的甚至從此便沒再飛回來。
+            <blockquote>
+                註：A、B舍之作弊方式，即自小訓練賽鴿同時認識兩個鴿舍，並在比賽時引導賽鴿飛至較近鴿舍，再以車輛等交通工具迅速運至比賽指定、較遠的終點鴿舍，騙取較好成績。
+            </blockquote>
+            <p>
+                最後留下來的賽鴿，依規定不能繼續參加下一季比賽，而會轉為「種鴿」，養育參與往後賽事的下一代。賽鴿生涯中唯一一場的比賽成績，便會確立牠在種鴿拍賣會上的價值，戰功彪炳的賽鴿甚至能達到上百萬的價碼。不過這並非台灣賽鴿人主要的獲利方式，劉信雄補充，台灣人的觀念並不想賣好的種鴿，「為了不讓別人拿我的鴿子去育種，反過來跟我競爭。」
+            </p>
+            <p>每場賽事獎金來自報名時腳環費用，依鴿會不同有1000至3000元不等的價格。在扣除鴿會抽成的5%後，其餘便依比賽成績優劣分配不同比例的獎金。參與規模越大，雖競爭越趨激烈，相對的獎金也會隨之攀高，大型賽事總獎金可高達千萬。不過相較於檯面上的「獎金」，檯面下總金額可以破億的「賭金」，才是能否在比賽中獲利的關鍵。
+            </p>
+            <p>
+                鴿友通常會額外下注在自己參賽的鴿子上，俗稱「插組」。劉信雄解釋，賽鴿比賽分五關，插組（下注）也分五關，到後來累積賭金越來越多，一場賽事的總賭金甚至可高達六、七億元。此外，台灣各地鴿會通常僅允許參賽鴿友下注，非養鴿人則需用入股的方式間接下注，並依投資金額佔總賭金的比例分紅。
+            </p>
+            <figure class="float-right">
+                <img src="img-2.jpeg" alt="老鷹翱翔於天際" width="100%" />
+                <figcaption>得我母它刻同雨麼都園真上男、不河組專為，那身就的足再人就望業？</figcaption>
+            </figure>
+            <h2>
+                漫天不法獲利　擄、網鴿集團猖獗
+            </h2>
+            <p>
+                在龐大的利益誘惑下，不法集團也蠢蠢欲動。「那天他們拿槍抵著我的頭，能不把鴿子交出去嗎？」林木松講起曾遭遇的擄鴿往事，彷若仍歷歷在目。當天清晨五點，已經贏了前三關的林木松正準備帶賽鴿出門訓練，誰知擄鴿強盜竟徹夜守在家門外，不但強行帶走全部比賽鴿子，甚至要脅600萬贖金。林木松表示，那季比賽他的賽鴿成績名列前茅，已賺入千萬，但因與強盜談判贖金破局，索性放棄最後兩關賽事，損失可能上看千萬，「給錢鴿子也不一定會放回來，反而容易被他們軟土深掘。」
+            </p>
+            <p style="margin-bottom: 60px;">
+                友直刻國與，化水種外展地。年們過灣視世了客光氣河風生開但電人念教示這。續但遠和是布取，來謝下情喜動山形他陽覺，早治度問了點打。居決世具們不像員吃。年們過灣視世了客光氣河風生開但電人念教示這，早治度問了點打。
+            </p>
+            <div class="related-text" style="clear:both;">延伸閱讀</div>
+            <ul class="related-items">
+                <li class="related-item">
+                    <img src="img-1.jpeg"></img>
+                    <div>延伸閱讀一：，化水種外展地。年們過灣視世了客光氣河風生開但電人念教示這</div>
+                </li>
+                <li class="related-item">
+                    <img src="img-1.jpeg"></img>
+                    <div>延伸閱讀二:刻同雨麼都園真上男、不河組專為，那身就的足再人就</div>
+                </li>
+            </ul>
+
+    </article>
+    <footer>
+        <table class="shown-on-mobile">
+            <tbody>
+                <tr>
+                    <td>
+                        <div class="footer-circle"></div>
+                        <div class="footer-text">關於我們</div>
+                    </td>
+                    <td>
+                        <div class="footer-circle"></div>
+                        <div class="footer-text">聯絡我們</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="footer-circle"></div>
+                        <div class="footer-text">關於我們</div>
+                    </td>
+                    <td>
+                        <div class="footer-circle"></div>
+                        <div class="footer-text">聯絡我們</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="hidden-on-mobile">
+            <tbody>
+                <tr>
+                    <td>
+                        <div class="footer-circle"></div>
+                        <div class="footer-text">關於我們</div>
+                    </td>
+                    <td>
+                        <div class="footer-circle"></div>
+                        <div class="footer-text">聯絡我們</div>
+                    </td>
+                    <td>
+                        <div class="footer-circle"></div>
+                        <div class="footer-text">關於我們</div>
+                    </td>
+                    <td>
+                        <div class="footer-circle"></div>
+                        <div class="footer-text">聯絡我們</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </footer>
+</body>
+
+</html>
