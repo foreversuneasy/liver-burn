@@ -1,0 +1,41 @@
+<html>
+
+<head>
+    <style>
+        body {
+            background-color: #eee;
+        }
+
+        .loading {
+            border: 3px solid #3a3;
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            border-right: 3px solid #fff;
+            border-bottom: 3px solid #fff;
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="loading"></div>
+<svg>
+        <path d="M100 100,L100 50,A50 50 0 0 0 50 100,Z" fill="#fa0"/>
+        <path d="M100 100,L100 50,A50 50 0 1 1 50 100,Z" fill="#09d"/>
+        <rect width="50" height="50" x="10" y="10" fill="#c00">
+                <set attributeName="x" to="40" begin="2s">
+              </rect>
+            
+              <rect width="50" height="50" x="10" y="10" fill="none" stroke="#000"/>
+
+              <circle fill="#FF4343" stroke="#890000" stroke-width="5" cx="80.141" cy="73.446" r="44" />
+              <set attributeName="cx" to="140" "cy"to="173"begin="2s">
+              </circle>
+              <circle  cx="10" cy="10" r="44" fill="none" stroke="#000"/>
+                
+</svg>
+</body>
+
+</html>
