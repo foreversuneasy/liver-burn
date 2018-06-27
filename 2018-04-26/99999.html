@@ -1,10 +1,42 @@
 <html>
 
 <head>
-    <script src="jquery.js"></script>
+
 </head>
 
 <body>
+        <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http:www.w3.or/TR/xhtml1-transitional.dtd">
+        <html xmlins="http://www.w3.org/1999/xhtml">
+        <head>
+          <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+          <title>Untitled Document</title>
+        
+          <link href="css.css" rel="stylesheet" type="text/css" />
+          <style>
+            @charset "utf-8";
+        /* CSS Document */
+        .round1{
+            width: 50px;
+            height:50px;
+            margin:0px 0px 0px 0px;
+            -webkit-animation: rl 4s linear infinite;
+            animation:  rl 4s linear infinite;
+            position: relative;
+        }
+        @keyframes rl
+        {
+            0%{transform: rotate(360deg)};
+            10%{transform: rotate(0deg)};
+        }
+          </style>
+        </head>
+        
+        <body>
+        <div><img src="recycle.png" class="round1" width:"100%" height="100%"/></div>
+        </div> 
+        </body>
+        
+        </html>
     <!DOCTYPE html>
     <meta charset="utf-8">
     <style>
@@ -32,13 +64,6 @@
             padding: 5px;
             text-align: center;
         }
-        #tshirt {
-  transform-origin: 50% 50%;
-  transform: rotate(45deg);
-}
- 
-
-
     </style>
 
     <body>
@@ -120,54 +145,7 @@
             }
 
 
-        </script>
-        <svg>
-          <rect width="60" height="60" x="50" y="50" fill="#0c0">
-            <animateTransform dur="2s" attributeName="transform" repeatCount="indefinite" type="rotate" from="0,80,80" to="360,80,80"
-            />
-        </rect>
-        <rect width="60" height="60" x="50" y="50" fill="none" stroke="#000">  
-        </svg>
-        <img src="tshirt.svg" alt="svg"  width= " 5% "/>
-        	
-        <g id="tshirt" transform="rotate(45 50 50)" x="0" y="0">
-            <!-- 鸚鵡圖案 -->
-          </g>
-
-          <svg id="tshirt" width="600" height="300" viewBox="0 0 600 300">
-            <img src="tshirt.svg" alt="svg" width="60" height="60" x="50" y="50" fill="#0c0">
-              <animateTransform dur="2s" attributeName="transform" repeatCount="indefinite" type="rotate" from="0,80,80" to="360,80,80"/> 
-          </img>
-          </svg>
-         <svg>
-            <rect width="20" height="10" x="0" y="-10" fill="#09c">
-                <animateMotion dur="5s" path="M7.4,15.3c17,20.4,48.8,38,91.6,27.8c79.5-18.9,107.4,48.2,69.4,48.2c-33.9,0-15.2-58.1,65.4-41.7c26.2,5.3,63.2-19.1,79.1-34.3" repeatCount="indefinite" rotate="auto" /> 
-              </rect>
-              <path fill="none" stroke="#000" d="M7.4,15.3c17,20.4,48.8,38,91.6,27.8c79.5-18.9,107.4,48.2,69.4,48.2c-33.9,0-15.2-58.1,65.4-41.7c26.2,5.3,63.2-19.1,79.1-34.3"/>
-         </svg>
-         <img src="tshirt.svg" alt="svg"  width= " 5% "/>
-         <svg>
-             <path d="M0 0 L50 50 A50 50,0 1 0 100 0" stroke="#000" fill="none"/>
-         </svg>
-         <svg>
-            <rect width="20" height="10" x="0" y="-10" fill="#09c">
-                <animateMotion dur="5s" path="M7.4,15.3c17,20.4,48.8,38,91.6,27.8c79.5-18.9,107.4,48.2,69.4,48.2c-33.9,0-15.2-58.1,65.4-41.7c26.2,5.3,63.2-19.1,79.1-34.3" repeatCount="indefinite" rotate="auto" /> 
-              </rect>
-              <path fill="none" stroke="#000" d="M7.4,15.3c17,20.4,48.8,38,91.6,27.8c79.5-18.9,107.4,48.2,69.4,48.2c-33.9,0-15.2-58.1,65.4-41.7c26.2,5.3,63.2-19.1,79.1-34.3"/>
-         </svg>
-         <script type="text/javascript" src="http://beneposto.pl/jqueryrotate/js/jQueryRotateCompressed.js"></script>
-         <img src="https://www.google.com/images/srpr/logo3w.png" id="image">
-         <script>
-         var angle = 0;
-         setInterval(function(){
-               angle+=3;
-              $("#image").rotate(angle);
-         },50);
-         </script>
-
-         
-         
-        
+        </script> 
     </body>
 
 </html>
