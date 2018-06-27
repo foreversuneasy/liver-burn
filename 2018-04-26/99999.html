@@ -20,7 +20,7 @@
             height:150px;
             margin:170px 150px 0px 400px;
             -webkit-animation: rl 4s linear infinite;
-            animation:  rl 4s linear infinite;
+            animation:  rl 2s linear infinite;
         }
         @keyframes rl
         {
@@ -70,6 +70,12 @@
         .some{
             position: relative
         }
+        .why{
+            position: absolute;
+            margin: 30px 0px 0px 600px;
+            font-family: "Microsoft JhengHei";
+            font-size: 18px;
+        }
     </style>
 
     <body>
@@ -89,7 +95,7 @@
                 radius = Math.min(width, height) / 2;
 
             var color = d3.scale.ordinal()
-                .range(["#98abc5", "#8a89a6", "#7b6888", "#6b486b", "#a05d56"]);
+                .range(["#99DD00", "#BBFF00", "#CCFF33", "#6b486b", "#a05d56"]);
 
             var arc = d3.svg.arc()
                 .outerRadius(radius - 10)
@@ -150,8 +156,10 @@
                 return d;
             }
 
-
         </script> 
+      <p class="why">
+          資料來源：中華民國傷殘宏恩協會理事長湯劍雄
+      </p>
     </body>
 
 </html>
