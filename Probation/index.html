@@ -146,6 +146,105 @@
                 width: 700px;
             }
         }
+       
+@media screen and (max-width:768px) {
+            .header-logobox {
+                padding-bottom: 45%; 
+                position: relative; 
+                margin-bottom:55 px;
+            }
+           .liver-logo {
+                position: absolute; 
+                left: 32%;
+                width: 35%;
+                }  
+            .line {
+                position: absolute; 
+                left: 0%;
+                top: 95%; 
+                width: 100%; 
+                height: 1%
+                } 
+            .law {
+                position: absolute; 
+                left: 15%;
+                top: 96%; 
+                width: 18%;
+                 }
+            .economics{
+                position: absolute; 
+                left: 40.5%;
+                top: 96%; 
+                width: 18%;
+                 }
+            .education{
+                position: absolute; 
+                left: 65.5%;
+                top: 96%; 
+                width: 18%;
+                 }
+            .fb {
+                position: absolute; 
+                right: 8%;
+                top: 7%; 
+                width: 6%;
+                } 
+            .ig {
+                position: absolute; 
+                right: 0%;
+                top: 7%; 
+                width: 6%;
+                }
+             
+        }
+
+
+        @media screen and (min-width: 768px) {
+           .header-logobox {
+                padding-bottom: 20%; 
+                position: relative; 
+            }
+           .liver-logo {
+                position: absolute; 
+                left:0;
+                width: 20% } 
+           .line {
+                position: absolute; 
+                right: 0%;
+                top: 35%; 
+                width: 75%;
+                height: 1% } 
+            .law {
+                position: absolute; 
+                left: 35%;
+                top: 36%; 
+                width: 15%;
+                 } 
+            .economics{
+                position: absolute; 
+                left: 55%;
+                top: 36%; 
+                width: 15%;
+            }
+            .education{
+                position: absolute; 
+                left: 75%;
+                top: 36%; 
+                width: 15%;
+            }
+            .fb {
+                position: absolute; 
+                right: 4%;
+                top: 2%; 
+                width: 3%;
+                } 
+            .ig {
+                position: absolute; 
+                right: 0%;
+                top: 2%; 
+                width: 3%;
+                }
+        }
 
         article>ul {
             width: 100%;
@@ -212,6 +311,7 @@
             letter-spacing: 1.6px;
             text-align: justify;
             margin-top: 30px;
+            font-weight: 400;
         }
 
         .related-text {
@@ -298,20 +398,19 @@
 </head>
 
 <body>
-    <header class="header">
-        <table>
-            <tbody>
-                <tr>
-                    <td>
-                        <div class="logo"></div>
-                    </td>
-                    <td style="width:22px;">
-                        <div class="menu"></div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </header>
+        <header>
+                <div class="header-logobox" style="margin-bottom: 50px">
+                     <figure>
+                        <img src="logo.png" alt="logo" class="liver-logo">
+                        <img src="分隔線.png" alt="line" class="line">
+                        <img src="司法人權.png" alt="law" class="law">
+                        <img src="產業經濟.png" alt="economics" class="economics">
+                        <img src="教育文化.png" alt="education" class="education">
+                        <img src="fb.png" alt="fb" class="fb">
+                        <img src="ig.png" alt="ig" class="ig">
+                    </figure>
+                </div>
+            </header>
     <article>
         <header>
             <span>大學報專題</span>
@@ -361,7 +460,7 @@
         <figure>
             <img src="protation03.jpg" alt="觀護人案件量" width="100%" />
         </figure>
-        <h2>
+        <h2 style="font-weight: 800; font-size: 28px;">
             司法系統進步的代價　觀護工作包山包海
         </h2>
         <P>
@@ -397,7 +496,7 @@
             曾擔任實習觀護人的國立台灣大學社會所學生游詠馨提到，觀護人的工作內容常須配合政令而有所更改。在實習期間，因應政府反毒宣導週，造成大量額外、瑣碎的行政業務，影響原訂排程的實習課程，甚至造成觀護人缺乏充分時間進行輔導、無法全面顧及所有人，只好壓縮輕微個案的投注心力。
         </p>
 
-        <h2>
+        <h2 style="font-weight: 800; font-size: 28px;">
             觀護人角色定位多元　衝突難避免
         </h2>
         <h2>
@@ -436,7 +535,7 @@
         <p>
             榮譽觀護人由地檢署提供訓練，主要聽從觀護人指導，辦理保護管束等業務。鄭添成指出，士林地檢署的榮譽觀護人，多半由熱心的退休人士擔任。榮譽觀護人同時能發揮地緣優勢，負責代勞某些交通較不便利的個案，不過相關報告仍需交由觀護人確認。
         </p>
-        <h2>
+        <h2 style="font-weight: 800; font-size: 28px;">
             改革成年觀護　何者為解方
         </h2>
         <h2>
@@ -452,7 +551,7 @@
             因此張裕煌認為，若要解決人力問題，首要之務便是落實《法院組織法》的修正內容，投入經費招募正式佐理員及心理師。另外，為提升觀護人專業性，可制定《觀護人職權行使法》，明確規定觀護人職責、業務範圍，以及觀護人得以配合運用的資源。
         </P>
         <h2>
-            （二）提升處遇成效  整合資源成關鍵
+            （二）提升處遇成效 整合資源成關鍵
         </h2>
         <p>
             「重點應是如何將政府有限的資源，能夠透過觀護人送到緩刑假釋等更生人手上。」沈上凱認為，緩刑假釋等更生人 極需的工作、家庭及醫療專業資源，現行提出的改革政策反倒著墨不多，應設法讓更生人有能力工作，以接受持續性的戒毒、戒酒治療。張裕煌也建議監獄中，可以將執行、處遇、治療串在一塊連成鐵三角，以利於更生觀護。
@@ -469,7 +568,7 @@
         <P>
             沈上凱建議，若能成立獨立的專責機關，可以較能確保經費，進一步解決人力不足的問題。然而他也指出，多數個案往往因懼怕檢察官，才讓觀護人得以更有效監督、管束，這也造成現行觀護人無法脫離地檢署專業化的兩難。
         </P>
-        <h2>
+        <h2 style="font-weight: 800; font-size: 28px;">
             觀護無可取代　改革刻不容緩
         </h2>
         <P>
@@ -481,18 +580,15 @@
         <P>
             隨著刑事政策思潮轉變，現行對受刑人採較寬容的處置方式，期待藉此降低監獄收容負擔，並協助受刑人復歸社會。政府雖於民國106年增額錄取4名觀護人員額，然而臨床心理師與觀護佐理員的預算員額仍舊掛零，現行採用的外包約聘形式助益有限。現《法院組織法》既已修法完畢，政府單位需即刻補足正式人力，落實專業分工，讓觀護人得以對不同個案提供適當協助，不再需負擔其餘龐雜業務。
         </P>
-        <p style="margin-bottom: 60px;">
-            友直刻國與，化水種外展地。年們過灣視世了客光氣河風生開但電人念教示這。續但遠和是布取，來謝下情喜動山形他陽覺，早治度問了點打。居決世具們不像員吃。年們過灣視世了客光氣河風生開但電人念教示這，早治度問了點打。
-        </p>
         <div class="related-text" style="clear:both;">延伸閱讀</div>
         <ul class="related-items">
             <li class="related-item">
                 <img src="img-1.jpeg"></img>
-                <div>延伸閱讀一：，化水種外展地。年們過灣視世了客光氣河風生開但電人念教示這</div>
+                <div>延伸閱讀一：</div>
             </li>
             <li class="related-item">
                 <img src="img-1.jpeg"></img>
-                <div>延伸閱讀二:刻同雨麼都園真上男、不河組專為，那身就的足再人就</div>
+                <div>延伸閱讀二：</div>
             </li>
         </ul>
 
