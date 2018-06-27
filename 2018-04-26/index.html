@@ -12,7 +12,7 @@
 
         body {
             font-family: "Microsoft JhengHei", "Noto Sans TC", "PingFang TC", "Apple LiGothic Medium", Roboto, "Lucida Grande", "Lucida Sans Unicode", sans-serif;
-            background-color: rgb(211, 207, 206);
+            background-color: #F1F1F1;
         }
 
         a {
@@ -49,6 +49,104 @@
                 max-width: 900px;
                 margin: 0 auto;
             }
+        }
+        @media screen and (max-width:768px) {
+            .header-logobox {
+                padding-bottom: 35%; 
+                position: relative; 
+                margin-bottom:50 px;
+            }
+           .liver-logo {
+                position: absolute; 
+                left:0;
+                width: 35% 
+                }  
+            .line {
+                position: absolute; 
+                right: 3%;
+                top:60%; 
+                width: 60%; 
+                height: 1%
+                } 
+            .law {
+                position: absolute; 
+                left: 37.3%;
+                top: 61%; 
+                width: 18%;
+                 }
+            .economics{
+                position: absolute; 
+                left: 57.95%;
+                top: 61%; 
+                width: 18%;
+                 }
+            .education{
+                position: absolute; 
+                left: 78.6%;
+                top: 61%; 
+                width: 18%;
+                 }
+            .fb {
+                position: absolute; 
+                right: 8%;
+                top: 7%; 
+                width: 6%;
+                } 
+            .ig {
+                position: absolute; 
+                right: 0%;
+                top: 7%; 
+                width: 6%;
+                }
+             
+        }
+
+
+        @media screen and (min-width: 768px) {
+           .header-logobox {
+                padding-bottom: 20%; 
+                position: relative; 
+            }
+           .liver-logo {
+                position: absolute; 
+                left:0;
+                width: 20% } 
+           .line {
+                position: absolute; 
+                right: 0%;
+                top: 35%; 
+                width: 75%;
+                height: 1% } 
+            .law {
+                position: absolute; 
+                left: 35%;
+                top: 36%; 
+                width: 15%;
+                 } 
+            .economics{
+                position: absolute; 
+                left: 55%;
+                top: 36%; 
+                width: 15%;
+            }
+            .education{
+                position: absolute; 
+                left: 75%;
+                top: 36%; 
+                width: 15%;
+            }
+            .fb {
+                position: absolute; 
+                right: 4%;
+                top: 2%; 
+                width: 3%;
+                } 
+            .ig {
+                position: absolute; 
+                right: 0%;
+                top: 2%; 
+                width: 3%;
+                }
         }
 
         header>table {
@@ -212,6 +310,7 @@
             letter-spacing: 1.6px;
             text-align: justify;
             margin-top: 30px;
+            font-weight:400;
         }
 
         .related-text {
@@ -298,20 +397,19 @@
 </head>
 
 <body>
-    <header class="header">
-        <table>
-            <tbody>
-                <tr>
-                    <td>
-                        <div class="logo"></div>
-                    </td>
-                    <td style="width:22px;">
-                        <div class="menu"></div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </header>
+        <header>
+                <div class="header-logobox" style="margin-bottom: 50px">
+                     <figure>
+                        <img src="logo.png" alt="logo" class="liver-logo">
+                        <img src="分隔線.png" alt="line" class="line">
+                        <img src="司法人權.png" alt="law" class="law">
+                        <img src="產業經濟.png" alt="economics" class="economics">
+                        <img src="教育文化.png" alt="education" class="education">
+                        <img src="fb.png" alt="fb" class="fb">
+                        <img src="ig.png" alt="ig" class="ig">
+                    </figure>
+                </div>
+            </header>
     <article>
         <header>
             <span>大學報專題</span>
@@ -324,7 +422,9 @@
                         target="_blank">陳棟、張玟榕、李昶毅、毛凱恩</a>
                 </b>
             </span>
-            <span class="author">攝影／
+        </div>
+            <div style="margin-bottom:15px">
+            <span class="author">攝影記者／
                 <b>
                     <a href="https://www.facebook.com/profile.php?id=100000782258940" target="_blank">陳棟、張玟榕、李昶毅、毛凱恩</a>
                 </b>
@@ -381,10 +481,6 @@
             <p>
                 鴿友通常會額外下注在自己參賽的鴿子上，俗稱「插組」。劉信雄解釋，賽鴿比賽分五關，插組（下注）也分五關，到後來累積賭金越來越多，一場賽事的總賭金甚至可高達六、七億元。此外，台灣各地鴿會通常僅允許參賽鴿友下注，非養鴿人則需用入股的方式間接下注，並依投資金額佔總賭金的比例分紅。
             </p>
-            <figure class="float-right">
-                <img src="img-2.jpeg" alt="老鷹翱翔於天際" width="100%" />
-                <figcaption>得我母它刻同雨麼都園真上男、不河組專為，那身就的足再人就望業？</figcaption>
-            </figure>
             <h2>
                 漫天不法獲利　擄、網鴿集團猖獗
             </h2>
@@ -429,7 +525,7 @@
             </p>
             <figure>
                 <img src="gugu03.jpg" alt="一顆鳳梨直挺挺地豎立在海邊" width="100%" />
-                <figcaption>林木松飼養的種鴿數量眾多，每一隻皆身價不斐，有些甚至是林木松親自到歐洲挑選、購買。圖／張玟榕攝</figcaption>
+                <figcaption>賽鴿遭網鴿集團所佈的細網勾纏，不幸身亡。據報載，遍佈山區細網也曾網住如台灣藍鵲等保育類，對生態造成不良影響。圖／鄭立帆提供</figcaption>
             </figure>
             <h2>
                 鴿會管理參差不齊　倒會成隱憂
@@ -494,25 +590,16 @@
             <P>
                 鴿子在天空飛翔，心裡有條回家的路，但台灣賽鴿的整體發展路線，尚處於前途未明的階段。害怕起霧的鴿子，在真的飛抵家門前，未來一切都還是未知數。
             </P>
-            <div class="infogram-embed" data-id="74753278-f8fc-48f5-bf11-7a58cee8cabc" data-type="interactive" data-title="nccu-project">
-                <div style="background-color: black;"></div>
-            </div>
-            <script>!function (e, t, n, s) { var i = "InfogramEmbeds", o = e.getElementsByTagName(t)[0], d = /^http:/.test(e.location) ? "http:" : "https:"; if (/^\/{2}/.test(s) && (s = d + s), window[i] && window[i].initialized) window[i].process && window[i].process(); else if (!e.getElementById(n)) { var a = e.createElement(t); a.async = 1, a.id = n, a.src = s, o.parentNode.insertBefore(a, o) } }(document, "script", "infogram-async", "https://e.infogram.com/js/dist/embed-loader-min.js");</script>
-            <div style="padding:8px 0;font-family:Arial!important;font-size:13px!important;line-height:15px!important;text-align:center;border-top:1px solid #dadada;margin:0 30px">
-                <a href="https://infogram.com/74753278-f8fc-48f5-bf11-7a58cee8cabc" style="color:#989898!important;text-decoration:none!important;"
-                    target="_blank">nccu-project</a>
-                <br>
-                <a href="https://infogram.com" style="color:#989898!important;text-decoration:none!important;" target="_blank" rel="nofollow">Infogram</a>
-            </div>
+                
             <div class="related-text" style="clear:both;">延伸閱讀</div>
             <ul class="related-items">
                 <li class="related-item">
                     <img src="img-1.jpeg"></img>
-                    <div>延伸閱讀一：，化水種外展地。年們過灣視世了客光氣河風生開但電人念教示這</div>
+                    <div>延伸閱讀一：</div>
                 </li>
                 <li class="related-item">
                     <img src="img-1.jpeg"></img>
-                    <div>延伸閱讀二:刻同雨麼都園真上男、不河組專為，那身就的足再人就</div>
+                    <div>延伸閱讀二：</div>
                 </li>
             </ul>
 
