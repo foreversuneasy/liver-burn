@@ -1,185 +1,45 @@
-<html>
 
-<head>
-
-</head>
-
-<body>
-        <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http:www.w3.or/TR/xhtml1-transitional.dtd">
-        <html xmlins="http://www.w3.org/1999/xhtml">
+        <!DOCTYPE html>
+        <html>
         <head>
-          <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-          <title>Untitled Document</title>
-        
-          <link href="css.css" rel="stylesheet" type="text/css" />
-          <style>
-            @charset "utf-8";
-        /* CSS Document */
-        .round1{
-            width: 150px;
-            height:150px;
-            margin:230px 150px 0px 405px;
-            -webkit-animation: rl 4s linear infinite;
-            animation:  rl 2s linear infinite;
-        }
-        @keyframes rl
-        {
-            0%{transform: rotate(360deg)};
-            10%{transform: rotate(0deg)};
-        }
-        .recycle01{
-            position: absolute
-        }
-          </style>
+            <meta charset="utf-8"> 
+            <title>Bootstrap 实例 - 模态框（Modal）插件</title>
+            <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+            <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+            <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         </head>
-        
         <body>
-        <div class="recycle01"><img src="recycle.png" class="round1" width:"100%" height="100%"/></div>
-        </div> 
+        
+        <h2>创建模态框（Modal）</h2>
+        <!-- 按钮触发模态框 -->
+        <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+            开始演示模态框
+        </button>
+        <!-- 模态框（Modal） -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                            &times;
+                        </button>
+                        <h4 class="modal-title" id="myModalLabel">
+                            模态框（Modal）标题
+                        </h4>
+                    </div>
+                    <div class="modal-body">
+                        在这里添加一些文本
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">关闭
+                        </button>
+                        <button type="button" class="btn btn-primary">
+                            提交更改
+                        </button>
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal -->
+        </div>
         </body>
-        
         </html>
-    <!DOCTYPE html>
-    <meta charset="utf-8">
-    <style>
-        .arc text {
-            font: 30px sans-serif;
-            text-anchor: middle;
-            font-family: "Microsoft JhengHei";
-        }
 
-        .arc path {
-            stroke: #fff;
-        }
-
-        .toolTip {
-            position: absolute;
-            display: none;
-            width: auto;
-            height: auto;
-            background: none repeat scroll 0 0 white;
-            border: 0 none;
-            border-radius: 8px 8px 8px 8px;
-            box-shadow: -3px 3px 15px #888888;
-            color: black;
-            font: 12px sans-serif;
-            padding: 5px;
-            text-align: center;
-        }
-        
-        .some{
-            position: relative
-        }
-        .why{
-            position: absolute;
-            margin: 30px 0px 0px 600px;
-            font-family: "Microsoft JhengHei";
-            font-size: 18px;
-        }
-        .why2{
-       
-            margin: 20px 0px 0px 320px;
-            font-family: "Microsoft JhengHei";
-            font-size: 48px;
-            font-weight: bold;
-        }
-        .why3{
-            position: absolute;
-            margin: 10px 0px 0px 425px;
-            font-family: "Microsoft JhengHei";
-            font-size: 48px;
-            font-weight: bold;
-        }
-    </style>
-
-    <body>
-            <p class="why2">
-                    台灣二手衣流向
-                </p>
-        <script src="https://d3js.org/d3.v3.min.js"></script>
-        <script class="some">
-
-
-            var div = d3.select("body").append("div").attr("class", "toolTip");
-            var dataset = [
-                { name: '外銷', total: 8124, percent: 67.9 },
-                { name: '焚燒', total: 1610, percent: 13.5 },
-                { name: '內銷', total: 660, percent: 5.5 }
-            ];
-
-            var width = 960,
-                height = 500,
-                radius = Math.min(width, height) / 2;
-
-            var color = d3.scale.ordinal()
-                .range(["#99DD00", "#BBFF00", "#CCFF33", "#6b486b", "#a05d56"]);
-
-            var arc = d3.svg.arc()
-                .outerRadius(radius - 10)
-                .innerRadius(radius - 70);
-
-            var pie = d3.layout.pie()
-                .sort(null)
-                .startAngle(1.1 * Math.PI)
-                .endAngle(3.1 * Math.PI)
-                .value(function (d) { return d.total; });
-
-            var svg = d3.select("body").append("svg")
-                .attr("width", width)
-                .attr("height", height)
-                .append("g")
-                .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
-
-
-            var g = svg.selectAll(".arc")
-                .data(pie(dataset))
-                .enter().append("g")
-                .attr("class", "arc");
-
-            g.append("path")
-                .style("fill", function (d) { return color(d.data.name); })
-                .transition().delay(function (d, i) {
-                    return i * 500;
-                }).duration(1500)
-                .attrTween('d', function (d) {
-                    var i = d3.interpolate(d.startAngle + 0.1, d.endAngle);
-                    return function (t) {
-                        d.endAngle = i(t);
-                        return arc(d)
-                    }
-                });
-            g.append("text")
-                .attr("transform", function (d) { return "translate(" + arc.centroid(d) + ")"; })
-                .attr("dy", ".35em")
-                .transition()
-                .delay(1000)
-                .text(function (d) { return d.data.name; });
-
-            d3.selectAll("path").on("mousemove", function (d) {
-                div.style("left", d3.event.pageX + 10 + "px");
-                div.style("top", d3.event.pageY - 25 + "px");
-                div.style("display", "inline-block");
-                div.html((d.data.name) + "<br>" + (d.data.total) + "<br>" + (d.data.percent) + "%");
-            });
-
-            d3.selectAll("path").on("mouseout", function (d) {
-                div.style("display", "none");
-            });
-
-
-            //d3.select("body").transition().style("background-color", "#d3d3d3");
-            function type(d) {
-                d.total = +d.total;
-                return d;
-            }
-
-        </script> 
-      <p class="why">
-          資料來源：中華民國傷殘宏恩協會理事長湯劍雄
-      </p>
-      <p class="why3">
-            2017
-        </p>
-    </body>
-
-</html>
