@@ -1,0 +1,15 @@
+@charset "utf-8";
+/* CSS Document */
+.round1{
+    width: 500px;
+    height:500px;
+    margin:0px 0px 0px 0px;
+    -webkit-animation: rl 4s linear infinite;
+    animation:  rl 4s linear infinite;
+    position: relative;
+}
+@keyframes rl
+{
+    0%{transform: rotate(360deg)};
+    10%{transform: rotate(0deg)};
+}
