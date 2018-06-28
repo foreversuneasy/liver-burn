@@ -301,6 +301,13 @@
 
         }
 
+        .circle {
+
+            animation-fill-mode: inherit;
+            animation-play-state: inherit;
+            animation-duration: .3s;
+        }
+
         .a4-bg {
             padding-bottom: calc(340/345*100%);
             position: relative;
@@ -800,6 +807,7 @@
             margin: auto;
             margin: 20px 0px 3px 0;
         }
+
         @media screen and (max-width: 768px) {
             .computer {
                 display: none
@@ -807,7 +815,7 @@
             .footer-bg {
                 position: relative;
                 width: 100%;
-               
+
                 overflow: hidden;
 
             }
@@ -859,7 +867,7 @@
             .footer-bg {
                 position: relative;
                 width: 100%;
-               
+
                 overflow: hidden;
             }
             .about-us {
@@ -902,11 +910,11 @@
             }
 
         }
-        footer>figure{
+
+        footer>figure {
             margin: 0px 0px 0px 0px;
             width: 100%;
         }
-        
     </style>
 
 </head>
@@ -1067,9 +1075,9 @@
                             </button>
                         </div>
                         <div class="modal-body" style="width: 100%">
-                                <figure>
-                                        <img src="fastfasion.png" alt="img3-sale image of this article" width="100%" />
-                                    </figure>
+                            <figure>
+                                <img src="fastfasion.png" alt="img3-sale image of this article" width="100%" />
+                            </figure>
                         </div>
                         <div class="modal-footer">
                             <button type="button" data-dismiss="modal">Close</button>
@@ -1105,14 +1113,15 @@
                 <h2>舊衣終點 台灣二手衣何去何從?</h2>
             </div>
             <p style="font-size: 36px; font-weight: 700;;margin:11% 10% 1% 10%">
-                    台灣二手衣流向
+                台灣二手衣流向
             </p>
             <div id="recycle-infograph" style="margin-top:-5%;">
                 <div class="recycle01">
                     <img src="recycle.png" class="round1" width: "100%" height="100%" />
                 </div>
             </div>
-            <script src="https://d3js.org/d3.v3.min.js"></script>
+            <div class="animation-block circle">
+            <script src="https://d3js.org/d3.v3.min.js" ></script>
             <script class="some">
                 var div = d3.select("#recycle-infograph").append("div").attr("class", "toolTip");
                 var dataset = [{
@@ -1193,6 +1202,7 @@
                     return d;
                 }
             </script>
+            </div>
             <div style="margin-left:160px;width: 100%;">
                 <p>
                     註：表為2017年統計資料
@@ -1346,59 +1356,63 @@
 
     </article>
     <footer>
-            <figure class="footer-bg computer" width="100%; ">
-                <img src="電腦版footer.png" alt="夾娃娃機" width="100%" />
-    
-                <p class="about-us">
+        <figure class="footer-bg computer" width="100%; ">
+            <img src="電腦版footer.png" alt="夾娃娃機" width="100%" />
+
+           <a href="https://joy2bitme.github.io/aboutus/index.html">
+           <p class="about-us">
+                關於我們
+            </p>
+            <div class="about-us-word">
+                <p>
+                    我們是一家致力於胡搞瞎搞的學生媒體，如果有事請打電話給我，沒事就不要打。我想好好放暑假。掰
+                </p>
+            </div>
+        </a>
+            <p class="contact-us">
+                聯絡我們
+            </p>
+            <div class="contact-us-word">
+                <p>
+                    地址；政治大學－林森北校區
+                </p>
+                <p style="margin-top: 3px">
+                    電話：0987098740
+                </p>
+                <pstyle="margin-top: 3px">
+                    信箱：02024@nccu.edu.tw
+                    </p>
+            </div>
+        </figure>
+        <figure class="footer-bg phone" width="100%;">
+            <img src="手機版footer.png" alt="夾娃娃機" width="100%" />
+            <a href="https://joy2bitme.github.io/aboutus/index.html">
+            <p class="about-us">
                     關於我們
+            </p>
+            <div class="about-us-word">
+                <p>
+                    我們是一家致力於胡搞瞎搞的學生媒體，如果有事請打電話給我，沒事就不要打。我想好好放暑假。掰
                 </p>
-                <div class="about-us-word">
-                    <p>
-                        我們是一家致力於胡搞瞎搞的學生媒體，如果有事請打電話給我，沒事就不要打。我想好好放暑假。掰
-                    </p>
-                </div>
-                <p class="contact-us">
-                    聯絡我們
+            </div>
+            </a>
+            <p class="contact-us">
+                聯絡我們
+            </p>
+            <div class="contact-us-word">
+                <p>
+                    地址；政治大學－林森北校區
                 </p>
-                <div class="contact-us-word">
-                    <p>
-                        地址；政治大學－林森北校區
-                    </p>
-                    <p style="margin-top: 3px">
-                        電話：0987098740
-                    </p>
-                    <pstyle="margin-top: 3px">
-                        信箱：02024@nccu.edu.tw
-                        </p>
-                </div>
-            </figure>
-            <figure class="footer-bg phone"  width="100%;">
-                <img src="手機版footer.png" alt="夾娃娃機" width="100%" />
-                <p class="about-us">
-                    關於我們
+                <p style="margin-top: 3px">
+                    電話：0987098740
                 </p>
-                <div class="about-us-word">
-                    <p>
-                        我們是一家致力於胡搞瞎搞的學生媒體，如果有事請打電話給我，沒事就不要打。我想好好放暑假。掰
+                <pstyle="margin-top: 3px">
+                    信箱：02024@nccu.edu.tw
                     </p>
-                </div>
-                <p class="contact-us">
-                    聯絡我們
-                </p>
-                <div class="contact-us-word">
-                    <p>
-                        地址；政治大學－林森北校區
-                    </p>
-                    <p style="margin-top: 3px">
-                        電話：0987098740
-                    </p>
-                    <pstyle="margin-top: 3px">
-                        信箱：02024@nccu.edu.tw
-                        </p>
-                </div>
-            </figure>
-    
-        </footer>
+            </div>
+        </figure>
+
+    </footer>
 </body>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
     crossorigin="anonymous"></script>
